@@ -1,0 +1,53 @@
+﻿body {
+    background-color:beige;
+}
+#border {
+    background-color: saddlebrown;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+.mynav{
+    background-color:saddlebrown;
+}
+.navbar-logo {
+    position: absolute;
+    width: 100vw;
+    background: #e33b38;
+    padding: 0 0;
+    margin-left: -50vw;
+    left: 49.3%;
+    right: 0;
+    top: 52px;
+    height: auto;
+    line-height: 50px;
+    z-index: 1;
+    margin-top: 0;
+}
+.navbar-custom {
+    background-color: #f8f8ff;
+    margin-bottom: 0px;
+}
+    .navbar-custom .navbar-nav .nav-link {
+        color: saddlebrown;
+        font-family: sans-serif;
+    }
+.nav-item {
+    float: right;
+}
+#footerNav1 {
+    background-color: saddlebrown;
+}
+.navbar-toggler{
+    color:saddlebrown;
+}
+#address {
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 18px;
+
+}
+.field-validation-error,
+.validation-summary-errors {
+    color: red;
+}

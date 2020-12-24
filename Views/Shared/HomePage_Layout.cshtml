@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?rd5re8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="~/MySite.css" rel="stylesheet" />
+    <title>@ViewBag.CurrentMenu</title>
+</head>
+<body>
+    <header>
+        <p id="border"></p>
+        <nav class="navbar navbar-expand-md navbar-light  bg-light">
+            <div class="container">
+                <a class="navbar-brand" asp-action="Index"> <img src="~/images/ShipleyIcon.jpg" /></a>
+                <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-column align-items-start ml-lg-2 ml-0" id="navbarCollapse">
+                    <span class="navbar-text ml-auto py-0 px-lg-2">
+                        <a class="fa fa-facebook" href="#" style="font-size:30px;color:darkblue;padding-right:15px;text-decoration:none;"></a>
+                        <a class="fa fa-twitter" href="#" style="font-size:30px;color:#0080ff;padding-right:15px;text-decoration:none;"></a>
+                        <a class="fa fa-instagram" href="#" style="font-size:30px;color:#900c3f;padding-right:15px;text-decoration:none;"></a>
+                        <a class="fa fa-pinterest" href="#" style="font-size:30px;color:red;padding-right:15px;text-decoration:none;"></a>
+                    </span>
+                    <ul class="navbar-nav mb-auto mt-0 ml-auto">
+
+                        @if (ViewBag.CurrentMenu == "Register")
+                        {
+                            <li class="nav-item active">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Register">Register <span class="sr-only">(current)</span></a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Register">Register <span class="sr-only">(current)</span></a>
+                            </li>
+                        }
+
+                        @if (ViewBag.CurrentMenu == "Company")
+                        {
+                            <li class="nav-item active">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Company">Company <span class="sr-only">(current)</span></a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Company">Company <span class="sr-only">(current)</span></a>
+                            </li>
+                        }
+                        @if (ViewBag.CurrentMenu == "Menu")
+                        {
+                            <li class="nav-item active">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Menu">Menu</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Menu">Menu</a>
+                            </li>
+                        }
+                        @if (ViewBag.CurrentMenu == "Franchise")
+                        {
+                            <li class="nav-item active">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Franchise">Franchise</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Franchise">Franchise</a>
+                            </li>
+                        }
+                        @if (ViewBag.CurrentMenu == "Community")
+                        {
+                            <li class="nav-item active">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Community">Community</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Community">Community</a>
+                            </li>
+                        }
+                        @if (ViewBag.CurrentMenu == "Contact")
+                        {
+                            <li class="nav-item active">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Contact">Contact</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Contact">Contact</a>
+                            </li>
+                        }
+                        @if (ViewBag.CurrentMenu == "Shop")
+                        {
+                            <li class="nav-item active">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Shop">Shop</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="Shop">Shop</a>
+                            </li>
+                        }
+                        @if (ViewBag.CurrentMenu == "Store Locator")
+                        {
+                            <li class="nav-item active">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="StoreLocator">Store Locator</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a style="color:saddlebrown" class="nav-link" asp-action="StoreLocator">Store Locator</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    @RenderBody()
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    @RenderSection("scripts", false)
+    <footer>
+        <div class="container" style="padding:30px;">
+            <div class="row">
+                <div class="col-sm-2 ">
+                    <h4 style="color:saddlebrown;font-weight:bold;">Follow us on</h4>
+
+                </div>
+                <div class="col-sm-3 ">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="navbar-right" style="float:right;">
+                            <a class="fa fa-facebook" href="#" style="font-size:30px;color:darkblue;padding-right:15px;text-decoration:none;"></a>
+                            <a class="fa fa-twitter" href="#" style="font-size:30px;color:#0080ff;padding-right:15px;text-decoration:none;"></a>
+                            <a class="fa fa-instagram" href="#" style="font-size:30px;color:#900c3f;padding-right:15px;text-decoration:none;"></a>
+                            <a class="fa fa-pinterest" href="#" style="font-size:30px;color:red;text-decoration:none;"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h4 style="color:saddlebrown;font-weight:bold;">Downlaod Menu</h4>
+
+                </div>
+                <div class="col-sm-3">
+                    <a href="#"> <img src="~/images/Menu.jpg" /></a>
+                    <a href="#"> <img src="~/images/Download.jpg" /></a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar mynav navbar-expand-md ">
+            <div class="container-fluid">
+                <div class="col-sm-2">
+                    <p style="font-size:30px;font-weight:bold;color:white;font-family:Algerian">Shipley</p>
+                </div>
+                <div class="col-sm-3">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <p style="color:burlywood;">&copy;Copyright 2019 Me. All rights reserved.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <button class="navbar-toggler mt-1" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon" style="color:burlywood"><i class="fa fa-bars" aria-expanded="false"></i></span>
+                </button>
+                <div class="collapse navbar-collapse flex-column align-items-start ml-lg-2 ml-0" id="navbarCollapse">
+                    <div class="col-sm-7">
+                        <ul class="navbar-nav mb-auto mt-0 ml-auto">
+                            @if (ViewBag.CurrentMenu == "Register")
+                            {
+                                <li class="nav-item active">
+                                    <a style="color:saddlebrown" class="nav-link" asp-action="Register">Register <span class="sr-only">(current)</span></a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a style="color:saddlebrown" class="nav-link" asp-action="Register">Register <span class="sr-only">(current)</span></a>
+                                </li>
+                            }
+                            @if (ViewBag.CurrentMenu == "Company")
+                            {
+                                <li class="nav-item active">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Company">Company </a>
+                                </li>
+                            }
+                            else
+                            {
+
+                                <li class="nav-item">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Company">Company</a>
+                                </li>
+                            }
+                            @if (ViewBag.CurrentMenu == "Menu")
+                            {
+                                <li class="nav-item active">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Menu">Menu</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Menu">Menu</a>
+                                </li>
+                            }
+                            @if (ViewBag.CurrentMenu == "Franchise")
+                            {
+                                <li class="nav-item active">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Franchise">Franchise</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Franchise">Franchise</a>
+                                </li>
+                            }
+                            @if (ViewBag.CurrentMenu == "Community")
+                            {
+                                <li class="nav-item active">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Community">Community</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Community">Community</a>
+                                </li>
+                            }
+                            @if (ViewBag.CurrentMenu == "Contact")
+                            {
+                                <li class="nav-item active">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Contact">Contact</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Contact">Contact</a>
+                                </li>
+                            }
+                            @if (ViewBag.CurrentMenu == "Shop")
+                            {
+                                <li class="nav-item active">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Shop">Shop</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a style="color:burlywood" class="nav-link" asp-action="Shop">Shop</a>
+                                </li>
+                            }
+                            @if (ViewBag.CurrentMenu == "Store Locator")
+                            {
+                                <li class="nav-item active">
+                                    <a style="color:burlywood" class="nav-link" asp-action="StoreLocator">StoreLocator</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a style="color:burlywood" class="nav-link" asp-action="StoreLocator">StoreLocator</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

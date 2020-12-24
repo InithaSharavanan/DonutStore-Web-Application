@@ -1,0 +1,36 @@
+﻿@model RegisterForm
+@{
+    Layout = "HomePage_Layout";
+    ViewData["Title"] = "ThankYou";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ThankYou</title>
+</head>
+<body>
+    <div style="height: 80px">&nbsp;</div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p style="color:green"> Thank You for registering to Shipley Donuts.</p>
+                <div style="height: 40px">&nbsp;</div>
+                <pre style="color:saddlebrown;font-size:18px;font-family:'Times New Roman', Times, serif">Please find the details below:</pre>
+                <div style="height: 20px">&nbsp;</div>
+                <pre style="color:saddlebrown;font-size:18px;font-family:'Times New Roman', Times, serif">FirstName                 : @Model.FirstName </pre>
+                <pre style="color:saddlebrown;font-size:18px;font-family:'Times New Roman', Times, serif">LastName                 : @Model.LastName</pre>
+                <pre style="color:saddlebrown;font-size:18px;font-family:'Times New Roman', Times, serif">Street Address          : @Model.StreetAddress</pre>
+                <pre style="color:saddlebrown;font-size:18px;font-family:'Times New Roman', Times, serif">Zip/Postal Code       : @Model.zipPostalCode</pre>
+                <pre style="color:saddlebrown;font-size:18px;font-family:'Times New Roman', Times, serif">City                          : @Model.City</pre>
+                <pre style="color:saddlebrown;font-size:18px;font-family:'Times New Roman', Times, serif">State                         : @Model.State</pre>
+                <pre style="color:saddlebrown;font-size:18px;font-family:'Times New Roman', Times, serif">Sample                     : @Model.Sample</pre>
+                <a asp-action="Index" class="btn btn-primary">Return to Home Page</a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
